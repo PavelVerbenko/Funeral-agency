@@ -74,7 +74,7 @@ p{
 .header-menu-link{
   color: var(--dark-color);
   display: block;
-  font-size: clamp(0.75rem, 0.5962rem + 0.5181vw, 1.0625rem);
+  font-size: clamp(0.55rem, 0.3662rem + 0.5181vw, 1.0625rem);
   font-weight: 500;
   
   text-transform: uppercase;
