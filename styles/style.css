@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+:root{
+  --dark-color: hsl(0,0%,0%);
+  --gray-color: hsl(0,0%,60%);
+  --light-color: hsl(0,0%,100%);
+  --border-color-dark: hsl(0deg 0% 60.79%);
+  --border-color-normal: hsl(0deg 0% 99.47%);
+  --border-color-light: hsl(0deg 0% 75.28%);
+}
+*{
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL STYLES */
+a{
+  text-decoration: none;
+  transition: .25s;
+}
+
+header{
+  min-height: 100vh;
+  border-bottom: 5px solid;
+}
+
+img{
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+  width: 100%;
+}
+
+p{
+  color: black;
+  font-size: 1.299em;
+  hyphens: auto;
+  line-height: 1.5;
+  margin: 1em 0;
+}
+
+/* CONTAINERS STYLES */
+.container{
+  padding: 1em;
+}
+.flex-container{
+  display: flex;
+}
+
+/* HEADER NAV */
+.logo-link{
+  color: var(--dark-color);
+  font-weight: 600;
+  letter-spacing: .125em;
+  text-transform: uppercase;
+}
+.header-nav{
+  align-items: center;
+  flex-direction: column;
+}
+.header-menu{
+  flex-wrap: wrap;
+  justify-content: center;  
+  padding: .75em 0;
+}
+.header-menu-link{
+  color: var(--dark-color);
+  display: block;
+  font-size: clamp(0.75rem, 0.5962rem + 0.5181vw, 1.0625rem);
+  font-weight: 500;
+  
+  text-transform: uppercase;
+}
+.header-menu-link:hover{
+  color: var(--gray-color);
+  text-decoration: underline;
+}
+.ghost-button{
+  border: .125em solid var(--gray-color);
+  min-width: 9em;
+  padding: 0 1em;
+}
+.ghost-button:hover{
+  background: var(--gray-color);
+  color: var(--light-color);
+}
+
+/* HEADER CONTENT */
+.header-img{
+  border-radius: 50%;
+  box-shadow: 0 0 0 .5em var(--border-color-dark),
+              0 0 0 1em var(--border-color-normal),
+              0 0 0 1.5em var(--border-color-light);
+  height: 15em;
+  margin: 2em auto;
+  overflow: hidden;
+  width: 15em;
+}
+
+.header-description{
+  margin: auto;
+  max-width: 50em
+}
+
+.header-title{
+  font-size: clamp(1.875rem, 1.2597rem + 2.0725vw, 3.125rem);
+  letter-spacing: -.025em;
+  line-height: 1.25;
+  margin-left: -.0625em;
+}
+.type-button{
+  margin-top: 1.5em;
+}
+.type-button:after{
+  content: " ▬";
+  margin-left: .5em;
+  vertical-align: .0715em;
+}
+
+.header_time {
+    font-size: clamp(1.0625rem, 0.7856rem + 0.9326vw, 1.625rem);
+}
+
+@media (width <= 1424px) {
+    .logo {
+        font-size: 20px;
+    }
+    .header_time {
+        font-size: 20px;
+    }
+
+    .header-menu {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+        width: 100%;
+    }
+  }
+
+  @media (width <= 1235px) {
+    .logo {
+        font-size: 16px;
+    }
+    .header_time {
+        font-size: 16px;
+    }
+  }
+
+@media (width <= 1024px) {
+    .header_time {
+      margin-top: 10px;
+    }
+
+    .header-title {
+        padding-top: 60px;
+    }
+
+    .logo-link {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: clamp(0.8125rem, 0.7202rem + 0.3109vw, 1rem);
+        width: 90%;
+    }
+
+    header{
+        overflow: hidden;
+      } 
+      img{
+        object-position: 50% 100%;
+      }
+
+      .header-menu-link{
+        padding: 0 15px;
+      }
+  }
+
+@media only screen and (min-width: 1024px){ 
+  /* GLOBAL STYLES */
+ 
+  
+  /* CONTAINERS STYLES */
+  .container{
+    padding: 2em;
+  }
+  
+  /* HEADER NAV */
+  .header-nav{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-menu-link{
+    padding: 0 15px;
+  }
+  .ghost-button{
+    font-size: .75em;
+  } 
+  
+  /* HEADER CONTENT */
+  .header-content{
+    position: relative;
+  }
+  
+  .header-img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 .5em var(--border-color-dark),
+                0 0 0 1em var(--border-color-normal),
+                0 0 0 1.5em var(--border-color-light);
+    height: 15em;
+    margin: 2em auto;
+    overflow: hidden;
+    width: 15em;
+  }
+  
+  .header-description{
+    margin: 6em 3em 0;
+    max-width: 50vw;
+  }
+  .header-title{
+    font-size: calc(1vw + 2.5em);
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-height: 1024px){
+  .header-content{
+    margin-top: 15vh;
+  }
+}
+
+
