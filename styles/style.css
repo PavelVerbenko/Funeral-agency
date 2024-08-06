@@ -49,6 +49,10 @@ p{
   font-size: clamp(0.9375rem, 0.8687rem + 0.3145vw, 1.25rem);
 }
 
+.pheader {
+    margin: 0px;
+}
+
 /* CONTAINERS STYLES */
 .container{
   padding: 1em;
@@ -178,13 +182,8 @@ p{
   border-bottom: 50px;
 }
 
-.content_two {
-  border-top: 5px solid;
-}
-
 .content_three {
   border-top: 5px solid;
-  margin-top: 50px;
 }
 
 .cards {
@@ -213,12 +212,12 @@ p{
 .card__title {
   display: flex;
   text-align: center;
-  color: #000000;
+  color: #ff5d5d;
   font-size: 22px;
   font-weight: 700;
   line-height: 120%; /* 26.4px */
   text-transform: uppercase;
-  margin: 5px;
+  margin: 20px auto;
 }
 
 /* Для текста внутри заголовка */
@@ -241,25 +240,41 @@ p{
   background-position: center;
 }
 
-.card_type_film {
-  background-image: url(../images/car1.png);
+.card__title_pox {
+  color: white;
 }
 
-.card_type_book {
+.card_type_car {
+  background-image: url(../images/car_fon.png);
+}
+
+.card_type_ritual {
   background-image: url(../images/ritual2.png);
 }
 
-.card_type_picture {
+.card_type_grob {
   background-image: url(../images/Grob.png);
+}
+
+.card_type_pogreb {
+  background-image: url(../images/pogreb.png);
+}
+
+.card_type_cremac {
+  background-image: url(../images/cremac.png);
 }
 
 .card {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
   min-height: 100%;
   position: relative;
+  align-items: flex-end;
+}
+
+h4 {
+  margin-top: 40px;
 }
 
 .header_section_center, .section_one_h4 {
@@ -278,6 +293,7 @@ p{
   justify-content: center;
   margin-bottom: 30px;
   line-height: 40px;
+  text-align: center;
   font-size: clamp(1rem, 0.5693rem + 1.4508vw, 1.875rem);
 }
 
